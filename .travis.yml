@@ -7,6 +7,7 @@ android:
         - platform-tools
         - extra-android-support
         - extra-android-m2repository
+        - extra-google-m2repository
         - extra-google-google_play_services
     licenses:
         - 'android-sdk-license-.+'
