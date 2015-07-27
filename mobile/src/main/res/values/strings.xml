@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Wear Dialler</string>
+    <string name="app_name">Wear Dialer</string>
     <string name="action_settings">Settings</string>
     <string name="welcome_message">Hi there! Thank you for downloading Wear Dialer. This is my first app for Android Wear. I hope you like it. This app is open sourced on GitHub, and is in beta, so feel free to contribute. Also, do check the Google+ Community!</string>
     <string name="google_plus">Google+ Community</string>
