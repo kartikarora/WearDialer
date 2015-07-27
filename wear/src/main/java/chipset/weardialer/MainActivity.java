@@ -1,4 +1,4 @@
-package chipset.weardialler;
+package chipset.weardialer;
 
 import android.app.Activity;
 import android.os.Bundle;

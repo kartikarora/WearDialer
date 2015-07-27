@@ -6,10 +6,8 @@ android:
         - android-22
         - platform-tools
         - extra-android-support
-        - extra-google-google_play_services
         - extra-android-m2repository
-        - sys-img-armeabi-v7a-android-wear-20
-        - sys-img-armeabi-v7a-android-22
+        - extra-google-google_play_services
     licenses:
         - 'android-sdk-license-.+'
 before_script:

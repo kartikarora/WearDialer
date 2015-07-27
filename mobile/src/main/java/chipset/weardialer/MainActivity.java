@@ -1,4 +1,4 @@
-package chipset.weardialler;
+package chipset.weardialer;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -15,7 +15,7 @@ import chipset.potato.Potato;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String URL_GITHUB = "http://www.github.com/chipset95/WearDialler";
+    private static final String URL_GITHUB = "http://www.github.com/chipset95/WearDialer";
     private static final String URL_GOOGLE_PLUS = "https://plus.google.com/communities/102020203714396804737";
 
     @Override

@@ -1,4 +1,4 @@
-package chipset.weardialler;
+package chipset.weardialer;
 
 import android.content.Intent;
 import android.net.Uri;

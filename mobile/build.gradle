@@ -6,11 +6,11 @@ android {
     def versionMajor = 1
     def versionMinor = 0
     def versionPatch = 0
-    def versionBuild = 260715
+    def versionBuild = 270715
     def versionId = 69 * versionMajor * 40 + versionMinor * 20 + versionPatch * 10 + versionBuild * 5
 
     defaultConfig {
-        applicationId "chipset.weardialler"
+        applicationId "chipset.weardialer"
         minSdkVersion 21
         targetSdkVersion 22
         versionCode versionId

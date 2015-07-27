@@ -1,6 +1,6 @@
 
 # Wear Dialer
-[![Travis-CI Build Status](https://travis-ci.org/chipset95/WearDialler.svg)](https://travis-ci.org/chipset95/WearDialler)
+[![Travis-CI Build Status](https://travis-ci.org/chipset95/WearDialer.svg)](https://travis-ci.org/chipset95/WearDialer)
 
 Dial a number on the watch and place a call from your phone. No need to take out the phone from pocket!
 
