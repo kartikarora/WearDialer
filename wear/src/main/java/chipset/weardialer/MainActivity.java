@@ -1,14 +1,15 @@
 package chipset.weardialer;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.wearable.activity.ConfirmationActivity;
 import android.support.wearable.view.WatchViewStub;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -175,8 +176,10 @@ public class MainActivity extends Activity {
                     public void onClick(View v) {
                         if (!mDialTextView.getText().toString().isEmpty()) {
                             sendMessage(mDialTextView.getText().toString(), null);
-                            Toast.makeText(getApplicationContext(), "Calling " + mDialTextView.getText(), Toast.LENGTH_SHORT).show();
+//                            Toast.makeText(getApplicationContext(), "Calling " + mDialTextView.getText(), Toast.LENGTH_SHORT).show();
                             mDialTextView.setText(null);
+                            startActivity(new Intent(MainActivity.this, ConfirmationActivity.class)
+                                    .putExtra(ConfirmationActivity.EXTRA_ANIMATION_TYPE, ConfirmationActivity.SUCCESS_ANIMATION));
                         }
                     }
                 });
