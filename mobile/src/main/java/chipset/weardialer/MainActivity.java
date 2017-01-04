@@ -5,8 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import chipset.potato.Potato;
-import com.crashlytics.android.Crashlytics;
-import io.fabric.sdk.android.Fabric;
 
 /**
  * Developer: chipset
@@ -17,26 +15,25 @@ import io.fabric.sdk.android.Fabric;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String URL_GITHUB = "http://www.github.com/chipset95/WearDialer";
+    private static final String URL_GITHUB = "http://www.github.com/kartikarora/WearDialer";
     private static final String URL_GOOGLE_PLUS = "https://plus.google.com/communities/102020203714396804737";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_main);
 
         findViewById(R.id.github_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Potato.potate().Intents().browserIntent(getApplicationContext(), URL_GITHUB);
+                Potato.potate(getApplicationContext()).Intents().browserIntent(URL_GITHUB);
             }
         });
 
         findViewById(R.id.google_plus_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Potato.potate().Intents().browserIntent(getApplicationContext(), URL_GOOGLE_PLUS);
+                Potato.potate(getApplicationContext()).Intents().browserIntent(URL_GOOGLE_PLUS);
             }
         });
     }

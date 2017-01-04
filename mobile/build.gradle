@@ -1,30 +1,20 @@
-buildscript {
-    repositories {
-        maven { url 'https://maven.fabric.io/public' }
-    }
-
-    dependencies {
-        classpath 'io.fabric.tools:gradle:1.19.2'
-    }
-}
 apply plugin: 'com.android.application'
-apply plugin: 'io.fabric'
 
 android {
-    compileSdkVersion 22
-    buildToolsVersion "22.0.1"
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
     def versionMajor = 1
     def versionMinor = 0
     def versionPatch = 0
-    def versionBuild = 150805
+    def versionBuild = 170104
     def versionId = 69 * ((versionMajor * 40) + (versionMinor * 20) + (versionPatch * 10) + (versionBuild * 5))
 
     defaultConfig {
         applicationId "chipset.weardialer"
         minSdkVersion 18
-        targetSdkVersion 22
+        targetSdkVersion 25
         versionCode versionId
-        versionName "${versionMajor}.${versionMinor}.${versionPatch} - ${versionId} " + "beta"
+        versionName "${versionMajor}.${versionMinor}.${versionPatch} - ${versionId}"
     }
     buildTypes {
         release {
@@ -43,10 +33,7 @@ repositories {
 
 dependencies {
     wearApp project(':wear')
-    compile 'com.android.support:appcompat-v7:22.2.1'
-    compile 'com.google.android.gms:play-services-wearable:7.5.0'
-    compile 'com.github.chipset95:Potato-Library:0.1.4'
-    compile('com.crashlytics.sdk.android:crashlytics:2.5.0@aar') {
-        transitive = true;
-    }
+    compile 'com.android.support:appcompat-v7:25.1.0'
+    compile 'com.google.android.gms:play-services-wearable:10.0.1'
+    compile 'com.github.kartikarora:Potato-Library:0.1.7'
 }
