@@ -3,22 +3,16 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
-    def versionMajor = 1
-    def versionMinor = 0
-    def versionPatch = 0
-    def versionBuild = 170104
-    def versionId = 69 * ((versionMajor * 40) + (versionMinor * 20) + (versionPatch * 10) + (versionBuild * 5))
-
     defaultConfig {
-        applicationId "chipset.weardialer"
-        minSdkVersion 18
+        applicationId "me.kartikarora.weardialer"
+        minSdkVersion 21
         targetSdkVersion 25
-        versionCode versionId
-        versionName "${versionMajor}.${versionMinor}.${versionPatch} - ${versionId}"
+        versionCode 1
+        versionName "1.0"
     }
     buildTypes {
         release {
-            minifyEnabled true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -28,12 +22,12 @@ repositories {
     maven {
         url "https://jitpack.io"
     }
-    maven { url 'https://maven.fabric.io/public' }
 }
 
 dependencies {
     wearApp project(':wear')
-    compile 'com.android.support:appcompat-v7:25.1.0'
+    compile 'com.android.support:customtabs:25.1.1'
     compile 'com.google.android.gms:play-services-wearable:10.0.1'
-    compile 'com.github.kartikarora:Potato-Library:0.1.7'
+    compile 'com.android.support:appcompat-v7:25.1.1'
+    compile 'com.github.kartikarora:Potato-Library:0.1.8'
 }
